@@ -1,0 +1,46 @@
+<ion-content padding class="transparent-header" [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}">
+    <ion-header>
+        <div style="background:#3c4147">
+            <ion-navbar style="text-align:center;background:#3c4147;">
+                <span style="font-size:20px;color:white">Enter Data</span>
+            </ion-navbar>
+        </div>
+    </ion-header>
+    <div padding class="main_div">
+        <ion-row class="logo_row">
+            <ion-col>
+                <img class="logo_img" src="assets/imgs/logo.png" />
+            </ion-col>
+        </ion-row>
+        <ion-row style="text-align:center; margin-top:50px;">
+            <ion-col>
+                <span style="font-size:18px; color:beige;">Please Enter New Data</span>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-list inset class="no-border">
+                    <ion-item class="inputform">
+                        <!-- <ion-label> &nbsp;&nbsp;Email</ion-label> -->
+                        <ion-input type="text" style="color:beige;" placeholder="Key" [(ngModel)]="useData.keyname"></ion-input>
+                    </ion-item>
+                    <ion-item class="inputform">
+                        <!-- <ion-label>&nbsp;&nbsp;Description</ion-label> -->
+                        <ion-input type="text" style="color:beige;" placeholder="Value" [(ngModel)]="useData.datavalue"></ion-input>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <button ion-button class="inputbutton" (click)="insertNewData()">INSERT</button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <button ion-button class="inputbutton" (click)="searchData()">SEARCH IN SQLITE</button>
+            </ion-col>
+        </ion-row>
+    </div>
+
+</ion-content>

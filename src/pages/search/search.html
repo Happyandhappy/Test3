@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            SEARCH FORM
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-row>
+        <ion-searchbar [(ngModel)]="curkeyname" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">
+        </ion-searchbar>
+    </ion-row>
+    <ion-row>
+        <ion-label>Key</ion-label>
+        <ion-label>{{curkeyname}}</ion-label>
+    </ion-row>
+    <ion-row>
+        <ion-label>Value</ion-label>
+        <ion-label>{{datavalue}}</ion-label>
+    </ion-row>
+
+</ion-content>
